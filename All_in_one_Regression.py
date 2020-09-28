@@ -18,7 +18,7 @@ regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 # Predicting the Test set results
 y_pred = regressor.predict(X_test)
-# Evaluating the Model Performance(R square)
+# Evaluating the Model Performance(R_2 square)
 from sklearn.metrics import r2_score
 print('Multiple_Linear_Regressio_Model=',r2_score(y_test, y_pred))
 ##############################
@@ -72,7 +72,7 @@ regressor = DecisionTreeRegressor(random_state = 0)
 regressor.fit(X_train, y_train)
 # Predicting the Test set results
 y_pred4= regressor.predict(X_test)
-# Evaluating the Model Performance(R square)
+# Evaluating the Model Performance (R_2 square)
 from sklearn.metrics import r2_score
 print('Decision Tree Regression=',r2_score(y_test, y_pred4))
 
@@ -85,7 +85,7 @@ regressor = RandomForestRegressor(n_estimators = 10, random_state = 0)#n=number 
 regressor.fit(X_train, y_train)
 # Predicting the Test set results
 y_pred5= regressor.predict(X_test)
-# Evaluating the Model Performance (R square)
+# Evaluating the Model Performance (R_2 square)
 from sklearn.metrics import r2_score
 print('Random Forest Regression',r2_score(y_test, y_pred5))
 ##############################
@@ -96,7 +96,7 @@ print('Random Forest Regression',r2_score(y_test, y_pred5))
 from xgboost import XGBRegressor
 regressor = XGBRegressor()
 regressor.fit(X_train, y_train)
-# Evaluating the Model Performance(R square)
+# Evaluating the Model Performance(R_2 square)
 from sklearn.metrics import r2_score
 y_pred6 = regressor.predict(X_test)
 print('XGBoost=',r2_score(y_test, y_pred6))
